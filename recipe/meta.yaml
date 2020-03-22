@@ -1,18 +1,18 @@
 {% set name = "ogs5py" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: dfde1763dd033ebeef380d098ffb8af47e8f72dead477bb6c9eeceeb342f9358
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0608381af0f0928e3414c6a7753b8898c0400957f7d09a13e9da01ea8462b245
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,12 +34,12 @@ test:
     - ogs5py
 
 about:
-  home: "https://github.com/GeoStat-Framework/ogs5py"
+  home: https://github.com/GeoStat-Framework/ogs5py
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "ogs5py: a python API for OpenGeoSys5"
-  description: "ogs5py: a python API for OpenGeoSys5"
+  summary: 'ogs5py: a python API for OpenGeoSys5'
+  description: 'ogs5py: a python API for OpenGeoSys5'
   doc_url: https://geostat-framework.readthedocs.io/projects/ogs5py/
   dev_url: https://github.com/GeoStat-Framework/ogs5py
 

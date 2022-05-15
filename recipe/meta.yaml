@@ -12,22 +12,22 @@ source:
 build:
   noarch: python
   number: 0
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
-    - setuptools >=41.0.1
+    - python >=3.6
+    - setuptools >=45
     - setuptools_scm >=3.5
   run:
-    - python >=3.5
+    - python >=3.6
     - numpy >=1.14.5
     - pandas >=0.23.2
-    - meshio >=4.0.3,<5.0
-    - lxml >=4.0,<5.0
-    - pexpect >=4.0,<5.0
-    - vtk >=8.1
+    - meshio >=4
+    - lxml >=4
+    - pexpect >=4
+    - vtk >=9
 
 test:
   imports:

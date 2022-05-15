@@ -1,5 +1,5 @@
 {% set name = "ogs5py" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 98fb1abf0ec8574150a14714f6b9e7861864b3a480fdb74893d5b83273413e82
+  sha256: bc2d0628a520198ca7f0c9a59754a16554d55534152d6786f0203beb6367ee5b
 
 build:
   noarch: python
   number: 0
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
-    - setuptools >=41.0.1
+    - python >=3.6
+    - setuptools >=45
     - setuptools_scm >=3.5
   run:
-    - python >=3.5
+    - python >=3.6
     - numpy >=1.14.5
     - pandas >=0.23.2
-    - meshio >=4.0.3,<5.0
-    - lxml >=4.0,<5.0
-    - pexpect >=4.0,<5.0
-    - vtk >=8.1
+    - meshio >=4
+    - lxml >=4
+    - pexpect >=4
+    - vtk >=9
 
 test:
   imports:

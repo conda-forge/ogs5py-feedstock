@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools >=45
-    - setuptools_scm >=3.5
+    - python >=3.7
+    - hatchling >=1.8.0
+    - hatch-vcs
   run:
-    - python >=3.6
+    - python >=3.7
     - numpy >=1.14.5
     - pandas >=0.23.2
     - meshio >=4
@@ -32,6 +32,12 @@ requirements:
 test:
   imports:
     - ogs5py
+  requires:
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pytest -vv tests
 
 about:
   home: https://github.com/GeoStat-Framework/ogs5py

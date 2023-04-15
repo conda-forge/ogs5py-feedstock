@@ -1,11 +1,11 @@
-About ogs5py
-============
+About ogs5py-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ogs5py-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/GeoStat-Framework/ogs5py
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ogs5py-feedstock/blob/main/LICENSE.txt)
 
 Summary: ogs5py: a python API for OpenGeoSys5
 

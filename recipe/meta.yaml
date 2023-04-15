@@ -1,5 +1,5 @@
 {% set name = "ogs5py" %}
-{% set version = "1.2.2" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 769a7ddaeae65fc8b3260c0ecb5ce5481eaf9c0b0872bb4819865c01160cc4d6
+  sha256: 3f09efb652e649db4cb4b487431390736ca6b25fc906f3cba9539210c608fa10
 
 build:
   noarch: python

@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3f09efb652e649db4cb4b487431390736ca6b25fc906f3cba9539210c608fa10
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - hatchling >=1.8.0
     - hatch-vcs
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.14.5
     - pandas >=0.23.2
     - meshio >=4
@@ -30,6 +30,8 @@ requirements:
     - vtk >=9
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ogs5py
 
